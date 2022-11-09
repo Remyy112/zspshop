@@ -6,12 +6,24 @@
 </head>
 <body>
     <div class="header">
-        ZSP shop
+        <h3>ZSP shop</h3>
     </div>
     <div class="body1">
-        <br>
         <h1>Logowanie</h1>
+        Adres e-mail:
+        <br>
         <input type="text">
+        <br>
+        <br>
+        Hasło:
+        <br>
+        <input type="text">
+        <br>
+        <br>
+        <input type="submit">
+        <br>
+        <br>
+        <a href="https://fajnepodroze.pl/wp-content/uploads/2021/07/Pasikonik_zielony.jpg">
+        <u>Nie polecam klikać</u></a>
     </div>
-    
 </body>
