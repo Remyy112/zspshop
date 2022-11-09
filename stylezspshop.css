@@ -8,8 +8,20 @@ body {
 .header {
     background-color: black;
     text-align: center;
+    height: 70px;
     font-size: 50px;
     color: white;
+}
+
+.body1 {
+    background-color: white;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+
+.h1 {
+    font-size:
 }
 
 .footer {
