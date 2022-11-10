@@ -20,10 +20,8 @@
         <input type="text">
         <br>
         <br>
-        <input type="submit">
+        <a href="zspshopnastepna%20strona.php"><button>Zaloguj się</button></a>
         <br>
         <br>
-        <a href="https://fajnepodroze.pl/wp-content/uploads/2021/07/Pasikonik_zielony.jpg">
-        <u>Nie polecam klikać</u></a>
     </div>
 </body>
