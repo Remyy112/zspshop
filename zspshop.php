@@ -9,6 +9,10 @@
         <h3>ZSP shop</h3>
     </div>
     <div class="body1">
+            <?php
+                $con = new mysqli("127.0.0.1", "root", "", "zspshop");
+                $res = $con->query("SELECT `email`, `password` FROM `users`");
+            ?>
         <h1>Logowanie</h1>
         Adres e-mail:
         <br>
@@ -20,7 +24,7 @@
         <input type="text">
         <br>
         <br>
-        <a href="zspshopnastepna%20strona.php"><button>Zaloguj się</button></a>
+        <a href="zspshop1.php"><button>Zaloguj się</button></a>
         <br>
         <br>
     </div>

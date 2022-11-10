@@ -2,7 +2,6 @@ body {
     background-color: black;
     text-align: center;
     margin: 0px;
-    overflow: hidden;
 }
 
 .header {
@@ -25,6 +24,35 @@ body {
     text-align: left;
     font-size: 20px;
     color: white;
+}
+
+table {
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    background-color: black;
+    border-radius: 5px;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+td {
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    background-color: black;
+    border-radius: 5px;
+}
+
+th {
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    background-color: black;
+    height: 85px;
+    width: 300px;
 }
 
 input {
