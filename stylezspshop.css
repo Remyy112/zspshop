@@ -44,6 +44,7 @@ td {
     border-style: solid;
     background-color: black;
     border-radius: 5px;
+    color: white;
 }
 
 th {
@@ -53,6 +54,7 @@ th {
     background-color: black;
     height: 85px;
     width: 300px;
+    color: white;
 }
 
 input {

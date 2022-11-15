@@ -11,17 +11,17 @@
     <div class="body1">
         <h2>Oferty</h2>
         <table>
-            <tr><th><u>Imię</u></th><th><u>Kupiony produkt</u></th><th><u>Cena</u></th></tr>
+            <tr><th><u>Imię</u></th><th><u>Oferta</u></th><th><u>Cena</u></th></tr>
                 <?php
                     $con = new mysqli("localhost", "root", "", "zspshop");
-                    $hej = $con->query("SELECT users.name, `purchases`, `prices` FROM `users purchases` JOIN users ON users_id=users.id");
+                    $hej = $con->query("SELECT users.name, `offers`, `prices` FROM `users offers` JOIN users ON users_id=users.id");
                     $siema = $hej->fetch_all(MYSQLI_ASSOC);
                         for($i=0;$i<count($siema); $i++){
-                            echo "<tr><th>".$siema[$i]["name"]."</th><th>".$siema[$i]["purchases"]."</th><th>".$siema[$i]["prices"]."</th></tr>";
+                            echo "<tr><th>".$siema[$i]["name"]."</th><th>".$siema[$i]["offers"]."</th><th>".$siema[$i]["prices"]."</th></tr>";
                         }
                 ?>
         </table>
         <br>
-        <a href="zspshop1.php"><button>Powrót</button></a>
+        <a href="menu.php"><button>Powrót</button></a>
     </div>
 </body>
