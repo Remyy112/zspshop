@@ -1,7 +1,7 @@
 <!DOCKTYPE html>
 <head>
     <meta charset="UTF-8">
-        <title>ZSP shop</title>
+        <title>ZSP shop - oferty użytkowników</title>
     <link rel="stylesheet" href="stylezspshop.css">
 </head>
 <body>

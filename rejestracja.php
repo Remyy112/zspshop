@@ -1,7 +1,7 @@
 <!DOCKTYPE html>
 <head>
     <meta charset="UTF-8">
-        <title>ZSP shop</title>
+        <title>ZSP shop - rejestracja</title>
     <link rel="stylesheet" href="stylezspshop.css">
 </head>
 <body>
@@ -33,5 +33,4 @@
         <br>
         <input type="submit" value="Zarejestruj się!">
     </form>
-    
 </body>

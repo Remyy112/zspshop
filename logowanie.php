@@ -1,7 +1,7 @@
 <!DOCKTYPE html>
 <head>
     <meta charset="UTF-8">
-        <title>ZSP shop</title>
+        <title>ZSP shop - logowanie</title>
     <link rel="stylesheet" href="stylezspshop.css">
 </head>
 <body>
@@ -25,6 +25,8 @@
                 }
             ?>
         <form method="POST">
+        <br>
+        <hr style="width: 30%">
         <h1>Logowanie</h1>
         Adres e-mail:
         <br>
