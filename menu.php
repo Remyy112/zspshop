@@ -37,34 +37,27 @@
                 $res=$con->query($set);
                 $siema = $res->fetch_all(MYSQLI_ASSOC);
                     for($i=0;$i<count($siema); $i++){
-                        echo $siema[$i]["offers"]." - ".$siema[$i]["prices"]."<br>";
+                        echo $siema[$i]["offers"]." - ".$siema[$i]["prices"]." <a href='szczegolyofert.php?offer_id=".$siema[$i]["id"]."'>Edytuj</a><br>";
                     }
             ?>
         
-            <br>
-            <a href="szczegolyofert.php"><button>Szczegóły</button></a>
-            
                 <br>
                 <hr style="width: 30%">
                 <h3>Zakupy użytkownika</h3>
         
             <?php
-                $con = new mysqli("localhost", "root", "", "zspshop");
                 $set="SELECT up.id, up.purchases, up.prices FROM `users purchases` AS up JOIN users ON users.id=up.users_id WHERE users.id='".$_COOKIE["id"]."'";
                 $res=$con->query($set);
                 $siema = $res->fetch_all(MYSQLI_ASSOC);
                     for($i=0;$i<count($siema); $i++){
-                        echo $siema[$i]["purchases"]." - ".$siema[$i]["prices"]."<br>";
+                        echo $siema[$i]["purchases"]." - ".$siema[$i]["prices"]." <a href='szczegolykupionychproduktow.php?purchase_id=".$siema[$i]["id"]."'>Edytuj</a><br>";
                     }
             ?>
         
-            <br>
-            <a href="szczegolykupionychproduktow.php"><button>Szczegóły</button></a>
-    
             <?php
-                $con = new mysqli("127.0.0.1", "root", "", "zspshop");
-                if(isset($_POST["offers"]) && isset($_POST["prices"])){
+                if(isset($_POST["offers"]) && strlen($_POST["offers"])>0 && isset($_POST["prices"])){
                     $sql="INSERT INTO `users offers`(`id`, `offers`, `prices`, `users_id`) VALUES ('NULL','".$_POST["offers"]."','".$_POST["prices"]."','".$_COOKIE["id"]."')";
+                    $con->query($sql);
                 }
             ?>
         
@@ -82,9 +75,9 @@
                 </form>
 
             <?php
-                $con = new mysqli("127.0.0.1", "root", "", "zspshop");
-                if(isset($_POST["offers"]) && isset($_POST["prices"])){
-                    $sql="INSERT INTO `users purchases`(`id`, `offers`, `prices`, `users_id`) VALUES ('NULL','".$_POST["offers"]."','".$_POST["prices"]."','".$_COOKIE["id"]."')";
+                if(isset($_POST["purchases"]) && strlen($_POST["purchases"])>0 && isset($_POST["prices"])){
+                    $sql="INSERT INTO `users purchases`(`id`, `purchases`, `prices`, `users_id`) VALUES ('NULL','".$_POST["purchases"]."','".$_POST["prices"]."','".$_COOKIE["id"]."')";
+                    $con->query($sql);
                 }
             ?>
         
@@ -93,19 +86,12 @@
                 <h3 style="color: white;">Dodaj zakupiony produkt</h3>
                 <form method="POST">
                 <p style="color: white;">Produkt:</p>
-                <input name="offers">
+                <input name="purchases">
                 <p style="color: white;">Cena:</p>
                 <input name="prices">
                 <br>
                 <br>
                 <input type="submit" value="Dodaj">
                 </form>
-        
-            <?php
-                $con = new mysqli("127.0.0.1", "root", "", "zspshop");
-                if(isset($_POST["offers"]) && isset($_POST["prices"])){
-                    $sql="INSERT INTO `users purchases`(`id`, `offers`, `prices`, `users_id`) VALUES ('NULL','".$_POST["offers"]."','".$_POST["prices"]."','".$_COOKIE["id"]."')";
-                }
-            ?>
     </div>
 </body>

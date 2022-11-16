@@ -40,7 +40,6 @@
         <br>
         <input type="submit" value="Zaloguj">
         </form>
-        <br>
-        <br>
+        <a href="rejestracja.php"><button>Zarejestruj się</button></a>
     </div>
 </body>
